@@ -32,15 +32,31 @@
 <script>
   (function () {
     (async function () {
-      if (await DB.auth.current()) { location.replace('painel.html'); return; }
+      if (await DB.auth.current()) {
+        location.replace('/admindeise/painel.html');
+        return;
+      }
+
       var f = document.getElementById('loginForm'), err = document.getElementById('err');
+
       f.addEventListener('submit', async function (e) {
-      e.preventDefault(); err.textContent = '';
-      var b = document.getElementById('go'); b.disabled = true;
-      try {
-        await DB.auth.login(document.getElementById('email').value, document.getElementById('pass').value);
-        location.replace('painel.html');
-      } catch (ex) { err.textContent = ex.message; b.disabled = false; }
+        e.preventDefault();
+        err.textContent = '';
+
+        var b = document.getElementById('go');
+        b.disabled = true;
+
+        try {
+          await DB.auth.login(
+            document.getElementById('email').value,
+            document.getElementById('pass').value
+          );
+
+          location.replace('/admindeise/painel.html');
+        } catch (ex) {
+          err.textContent = ex.message;
+          b.disabled = false;
+        }
       });
     })();
   })();
