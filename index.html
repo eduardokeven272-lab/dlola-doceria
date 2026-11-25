@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>D'Lola Doceria · Doces Gourmet</title>
+<meta name="description" content="Doceria artesanal: cardápio online, bolos personalizados e pedidos por encomenda.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/store.css">
+</head>
+<body>
+<header class="site-head">
+  <div class="wrap head-in">
+    <a class="brand" href="#/" id="brand"></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    <nav class="nav" id="nav" aria-label="Principal">
+      <a href="#/" data-r="">Início</a>
+      <a href="#/cardapio" data-r="cardapio">Cardápio</a>
+      <a href="#/bolos" data-r="bolos">Encomende seu bolo</a>
+      <a href="#/contato" data-r="contato">Contato</a>
+    </nav>
+    <a class="cart-btn" href="#/carrinho" id="cartBtn" aria-label="Abrir carrinho">🛍️ <span class="cart-txt">Carrinho</span> <b id="cartCount">0</b></a>
+  </div>
+</header>
+<main id="app" tabindex="-1"></main>
+<footer class="foot" id="contato"></footer>
+<script src="js/ui.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>window.SUPABASE_URL='https://wrvxyvmovsdmrvxfzyrt.supabase.co'; window.SUPABASE_ANON_KEY='sb_publishable_HVEi8ycSMKdd_7H5q-9A2Q_zkhoGH-F';</script>
+<script src="js/db.js"></script>
+<script src="js/store.js"></script>
+</body>
+</html>
